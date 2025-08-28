@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vision Futuriste - Site Professionnel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.0/css/all.min.css">
+<style>
+/* Custom CSS */
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+.floating {
+animation: float 6s ease-in-out infinite;
+}
+.gradient-text {
+background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+.glass-effect {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.parallax {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.card-hover {
+transition: all 0.3s ease;
+}
+.card-hover:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px
+rgba(0, 0, 0, 0.04);
+}
+.typing-effect::after {
+content: "|";
+animation: blink 1s infinite;
+}
+@keyframes blink {
+0%, 100% { opacity: 1; }
+50% { opacity: 0; }
+}
+</style>
+</head>
+<body class="bg-gray-900 text-white font-sans overflow-x-hidden">
+<!-- Navigation -->
+<nav class="glass-effect fixed w-full z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<div class="flex-shrink-0">
+<span class="text-2xl font-bold gradienttext">VisionFutur</span>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-4">
+<a href="#home" class="px-3 py-2 rounded-md text-sm fontmedium hover:bg-gray-800 transition duration-300">Accueil</a>
+<a href="#services" class="px-3 py-2 rounded-md text-sm 
+font-medium hover:bg-gray-800 transition duration-300">Services</a>
+<a href="#portfolio" class="px-3 py-2 rounded-md text-sm 
+font-medium hover:bg-gray-800 transition duration-300">Portfolio</a>
+<a href="#about" class="px-3 py-2 rounded-md text-sm 
+font-medium hover:bg-gray-800 transition duration-300">À propos</a>
+<a href="#contact" class="px-3 py-2 rounded-md text-sm 
+font-medium bg-blue-600 hover:bg-blue-700 transition duration-300">Contact</a>
+</div>
+</div>
+<div class="-mr-2 flex md:hidden">
+<button id="mobile-menu-button" class="inline-flex itemscenter justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bggray-700 focus:outline-none">
+<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round"
+stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden md:hidden">
+<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+<a href="#home" class="block px-3 py-2 rounded-md text-base fontmedium hover:bg-gray-800 transition duration-300">Accueil</a>
+<a href="#services" class="block px-3 py-2 rounded-md text-base 
+font-medium hover:bg-gray-800 transition duration-300">Services</a>
+<a href="#portfolio" class="block px-3 py-2 rounded-md text-base 
+font-medium hover:bg-gray-800 transition duration-300">Portfolio</a>
+<a href="#about" class="block px-3 py-2 rounded-md text-base 
+font-medium hover:bg-gray-800 transition duration-300">À propos</a>
+<a href="#contact" class="block px-3 py-2 rounded-md text-base 
+font-medium bg-blue-600 hover:bg-blue-700 transition duration-300">Contact</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center 
+parallax" style="background-image: url('https://images.unsplash.com/photo1516321318423-f06f85e504b3?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c
+rop&w=2070&q=80');">
+<div class="absolute inset-0 bg-black opacity-50"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 textcenter">
+<h1 class="text-5xl md:text-7xl font-bold mb-6">
+<span class="gradient-text typing-effect">Transformez</span>
+votre vision en réalité
+</h1>
+<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+Nous créons des expériences digitales exceptionnelles qui 
+captivent et inspirent.
+</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="#contact" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 
+rounded-lg text-lg font-semibold transition duration-300 transform hover:scale105">
+Commencez votre projet
+</a>
+<a href="#services" class="px-8 py-4 glass-effect hover:bg-gray800 rounded-lg text-lg font-semibold transition duration-300 transform 
+hover:scale-105">
+Nos services
+</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+<a href="#services" class="animate-bounce inline-block">
+<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path stroke-linecap="round" stroke-linejoin="round" strokewidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+</svg>
+</a>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Nos 
+Services</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Nous offrons une gamme complète de services pour répondre à 
+tous vos besoins digitaux.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="glass-effect rounded-xl p-8 card-hover">
+<div class="w-16 h-16 bg-blue-600 rounded-lg flex itemscenter justify-center mb-6">
+<i class="fas fa-code text-2xl text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Développement Web</h3>
+<p class="text-gray-300 mb-4">
+Création de sites web sur mesure, performants et adaptés 
+à tous les appareils.
+</p>
+<ul class="space-y-2 text-gray-400">
+<li class="flex items-center">
+<i class="fas fa-check-circle text-blue-400 mr2"></i>
+Sites vitrines
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-blue-400 mr2"></i>
+E-commerce
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-blue-400 mr2"></i>
+Applications web
+</li>
+</ul>
+</div>
+<!-- Service 2 -->
+<div class="glass-effect rounded-xl p-8 card-hover">
+<div class="w-16 h-16 bg-purple-600 rounded-lg flex itemscenter justify-center mb-6">
+<i class="fas fa-paint-brush text-2xl text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Design UI/UX</h3>
+<p class="text-gray-300 mb-4">
+Conception d'interfaces utilisateur intuitives et 
+d'expériences mémorables.
+</p>
+<ul class="space-y-2 text-gray-400">
+<li class="flex items-center">
+<i class="fas fa-check-circle text-purple-400 mr2"></i>
+Design d'interface
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-purple-400 mr2"></iExpérience utilisateur
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-purple-400 mr2"></i>
+Prototypage
+</li>
+</ul>
+</div>
+<!-- Service 3 -->
+<div class="glass-effect rounded-xl p-8 card-hover">
+<div class="w-16 h-16 bg-pink-600 rounded-lg flex itemscenter justify-center mb-6">
+<i class="fas fa-chart-line text-2xl text-white"></i>
+</div>
+<h3 class="text-2xl font-bold mb-3">Marketing Digital</h3>
+<p class="text-gray-300 mb-4">
+Stratégies digitales sur mesure pour augmenter votre 
+visibilité en ligne.
+</p>
+<ul class="space-y-2 text-gray-400">
+<li class="flex items-center">
+<i class="fas fa-check-circle text-pink-400 mr2"></i>
+SEO
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-pink-400 mr2"></i>
+Publicité en ligne
+</li>
+<li class="flex items-center">
+<i class="fas fa-check-circle text-pink-400 mr2"></i>
+Stratégie de contenu
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 gradienttext">Notre Portfolio</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Découvrez nos réalisations qui ont marqué nos clients et leur 
+public.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="relative group overflow-hidden rounded-xl cardhover">
+<img src="https://images.unsplash.com/photo-1551650975-
+87deedd944c3?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c
+rop&w=1974&q=80" alt="Projet E-commerce" class="w-full h-64 object-cover 
+transition duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black totransparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="text-2xl font-bold text-white mb-2">Plateforme 
+E-commerce</h3>
+<p class="text-gray-300 mb-4">Une solution complète pour 
+vendre en ligne avec un design moderne.</p>
+<div class="flex space-x-2">
+<span class="px-3 py-1 bg-blue-600 rounded-full textsm">Développement</span>
+<span class="px-3 py-1 bg-purple-600 rounded-full 
+text-sm">Design</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="relative group overflow-hidden rounded-xl cardhover">
+<img src="https://images.unsplash.com/photo-1467232004584-
+a241de8bcf5d?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c
+rop&w=2069&q=80" alt="Application Mobile" class="w-full h-64 object-cover 
+transition duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black totransparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="text-2xl font-bold text-white mb2">Application Mobile</h3>
+<p class="text-gray-300 mb-4">Une application intuitive 
+pour gérer vos finances personnelles.</p>
+<div class="flex space-x-2">
+<span class="px-3 py-1 bg-blue-600 rounded-full textsm">Mobile</span>
+<span class="px-3 py-1 bg-pink-600 rounded-full textsm">UI/UX</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="relative group overflow-hidden rounded-xl cardhover">
+<img src="https://images.unsplash.com/photo-1551288049-
+bebda4e38f71?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c
+rop&w=2070&q=80" alt="Site Corporate" class="w-full h-64 object-cover transition 
+duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black totransparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6 w-full">
+<h3 class="text-2xl font-bold text-white mb-2">Site 
+Corporate</h3>
+<p class="text-gray-300 mb-4">Une présence en ligne 
+professionnelle pour une entreprise internationale.</p>
+<div class="flex space-x-2">
+<span class="px-3 py-1 bg-blue-600 rounded-full textsm">Web</span>
+<span class="px-3 py-1 bg-green-600 rounded-full 
+text-sm">SEO</span>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-flex items-center px-6 py-3 border 
+border-transparent text-base font-medium rounded-md text-white bg-blue-600 
+hover:bg-blue-700 transition duration-300">
+Voir tous nos projets
+<svg class="ml-3 -mr-1 h-5 w-5"
+xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 
+0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+</svg>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+<div class="mb-12 lg:mb-0">
+<h2 class="text-4xl md:text-5xl font-bold mb-6 gradienttext">Qui sommes-nous ?</h2>
+<p class="text-lg text-gray-300 mb-6">
+VisionFutur est une agence digitale innovante spécialisée 
+dans la création d'expériences web et mobiles exceptionnelles.
+</p>
+<p class="text-lg text-gray-300 mb-8">
+Fondée en 2015, notre équipe de passionnés travaille sans 
+relâche pour transformer vos idées en solutions digitales performantes et 
+esthétiques.
+</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+<div class="text-3xl font-bold text-blue-400 mb2">150+</div>
+<div class="text-gray-300">Projets réalisés</div>
+</div>
+<div class="bg-gray-700 bg-opacity-50 p-4 rounded-lg">
+<div class="text-3xl font-bold text-purple-400 mb2">98%</div>
+<div class="text-gray-300">Clients satisfaits</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="relative z-10">
+<img src="https://images.unsplash.com/photo1579389083078-4e7018379f7e?ixlib=rb-
+4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=c
+rop&w=2070&q=80" alt="Notre équipe" class="rounded-xl shadow-2xl w-full">
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600 
+rounded-full opacity-20"></div>
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-purple-600 
+rounded-full opacity-20"></div>
+<div class="absolute top-1/2 left-1/2 transform -translate-x1/2 -translate-y-1/2 w-40 h-40 bg-pink-600 rounded-full opacity-20"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Ce 
+qu'ils disent de nous</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Découvrez les témoignages de nos clients satisfaits.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="glass-effect rounded-xl p-8 card-hover">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img
+src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-full 
+h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold">Sophie Martin</h4>
+<p class="text-gray-400 text-sm">CEO, Entreprise 
+XYZ</p>
+</div>
+</div>
+<p class="text-gray-300 italic">
+"VisionFutur a transformé notre présence en ligne. Leur 
+approche professionnelle et leur créativité ont dépassé nos attentes."
+</p>
+<div class="mt-4 text-yellow-400">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="glass-effect rounded-xl p-8 card-hover">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img
+src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full 
+h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold">Thomas Dubois</h4>
+<p class="text-gray-400 text-sm">Directeur 
+Marketing</p>
+</div>
+</div>
+<p class="text-gray-300 italic">
+"Le site web qu'ils ont créé pour nous a augmenté notre 
+taux de conversion de 40%. Un travail remarquable !"
+</p>
+<div class="mt-4 text-yellow-400">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="glass-effect rounded-xl p-8 card-hover">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img
+src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-full 
+h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold">Émilie Laurent</h4>
+<p class="text-gray-400 text-sm">Fondatrice, Startup 
+ABC</p>
+</div>
+</div>
+<p class="text-gray-300 italic">
+"Leur équipe a su comprendre nos besoins spécifiques et 
+livrer une solution parfaitement adaptée à notre activité."
+</p>
+<div class="mt-4 text-yellow-400">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+<div class="mb-12 lg:mb-0">
+<h2 class="text-4xl md:text-5xl font-bold mb-6 gradienttext">Contactez-nous</h2>
+<p class="text-lg text-gray-300 mb-8">
+Prêt à donner vie à votre projet ? Remplissez le 
+formulaire ou contactez-nous directement.
+</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-blue-600 
+flex items-center justify-center">
+<i class="fas fa-map-marker-alt text-white 
+text-xl"></i>
+</div>
+</div>
+<div class="ml-4">
+<h3 class="text-lg font-medium textwhite">Adresse</h3>
+<p class="text-gray-300">123 Rue de la 
+Technologie, 75000 Paris</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-purple-600 
+flex items-center justify-center">
+<i class="fas fa-phone-alt text-white textxl"></i>
+</div>
+</div>
+<div class="ml-4">
+<h3 class="text-lg font-medium textwhite">Téléphone</h3>
+<p class="text-gray-300">+33 1 23 45 67 89</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex-shrink-0">
+<div class="w-12 h-12 rounded-full bg-pink-600 
+flex items-center justify-center">
+<i class="fas fa-envelope text-white textxl"></i>
+</div>
+</div>
+<div class="ml-4">
+<h3 class="text-lg font-medium textwhite">Email</h3>
+<p class="text-gray300">contact@visionfutur.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-effect rounded-xl p-8">
+<form id="contactForm" class="space-y-6">
+<div>
+<label for="name" class="block text-sm font-medium 
+text-gray-300">Nom complet</label>
+<input type="text" id="name" name="name" required
+class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 
+text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium 
+text-gray-300">Email</label>
+<input type="email" id="email" name="email" required
+class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 
+text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium 
+text-gray-300">Sujet</label>
+<input type="text" id="subject" name="subject"
+required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md 
+py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+</div>
+<div>
+<label for="message" class="block text-sm font-medium 
+text-gray-300">Message</label>
+<textarea id="message" name="message" rows="4"
+required class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md 
+py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue500"></textarea>
+</div>
+<div>
+<button type="submit" class="w-full flex justifycenter py-3 px-4 border border-transparent rounded-md shadow-sm text-lg fontmedium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 
+focus:ring-offset-2 focus:ring-blue-500 transition duration-300">
+Envoyer le message
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-16 bg-gradient-to-r from-blue-900 to-purple-900">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Abonnezvous à notre newsletter</h2>
+<p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+Recevez les dernières actualités, conseils et offres spéciales 
+directement dans votre boîte mail.
+</p>
+<form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+<input type="email" placeholder="Votre email" required
+class="flex-grow px-5 py-3 rounded-lg bg-white bg-opacity-20 text-white 
+placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white">
+<button type="submit" class="px-6 py-3 bg-white text-blue-900 
+font-semibold rounded-lg hover:bg-gray-100 transition duration-300">
+S'abonner
+</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<h3 class="text-2xl font-bold gradient-text mb4">VisionFutur</h3>
+<p class="text-gray-400">
+Nous transformons vos idées en solutions digitales 
+exceptionnelles.
+</p>
+<div class="flex space-x-4 mt-6">
+<a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">
+<i class="fab fa-facebook-f text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">
+<i class="fab fa-twitter text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">
+<i class="fab fa-instagram text-xl"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">
+<i class="fab fa-linkedin-in text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-white mb-4">Liens 
+rapides</h4>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-white 
+transition duration-300">Accueil</a></li>
+<li><a href="#services" class="text-gray-400 hover:textwhite transition duration-300">Services</a></li>
+<li><a href="#portfolio" class="text-gray-400 hover:textwhite transition duration-300">Portfolio</a></li>
+<li><a href="#about" class="text-gray-400 hover:textwhite transition duration-300">À propos</a></li>
+<li><a href="#contact" class="text-gray-400 hover:textwhite transition duration-300">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-white mb4">Services</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">Développement Web</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">Design UI/UX</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">Marketing Digital</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">Applications Mobiles</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white 
+transition duration-300">SEO</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-white mb4">Contact</h4>
+<address class="not-italic text-gray-400 space-y-3">
+<p>123 Rue de la Technologie</p>
+<p>75000 Paris, France</p>
+<p>Email: contact@visionfutur.com</p>
+<p>Tél: +33 1 23 45 67 89</p>
+</address>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col 
+md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">
+&copy; 2023 VisionFutur. Tous droits réservés.
+</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 hover:text-white text-sm 
+transition duration-300">Politique de confidentialité</a>
+<a href="#" class="text-gray-400 hover:text-white text-sm 
+transition duration-300">Conditions d'utilisation</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 
+rounded-full flex items-center justify-center text-white shadow-lg hover:bg-blue700 transition duration-300 opacity-0 invisible">
+<i class="fas fa-arrow-up"></i>
+</button>
+<!-- JavaScript -->
+<script>
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+// Close mobile menu if open
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+}
+}
+});
+});
+// Back to top button
+const backToTopButton = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.remove('opacity-100', 'visible');
+backToTopButton.classList.add('opacity-0', 'invisible');
+}
+});
+backToTopButton.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+// Form submission
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', (e) => {
+e.preventDefault();
+// Get form values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const subject = document.getElementById('subject').value;
+const message = document.getElementById('message').value;
+// Here you would typically send the form data to a server
+// For this example, we'll just show an alert
+alert(`Merci ${name} pour votre message! Nous vous contacterons 
+bientôt à ${email}.`);
+// Reset form
+contactForm.reset();
+});
+// Typing effect
+const words = ["Transformez", "Créez", "Imaginez", "Développez"];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const typingElement = document.querySelector('.typing-effect');
+function type() {
+const currentWord = words[wordIndex];
+if (isDeleting) {
+typingElement.textContent = currentWord.substring(0, charIndex -
+1);
+charIndex--;
+} else {
+typingElement.textContent = currentWord.substring(0, charIndex +
+1);
+charIndex++;
+}
+if (!isDeleting && charIndex === currentWord.length) {
+isDeleting = true;
+setTimeout(type, 1000);
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+wordIndex = (wordIndex + 1) % words.length;
+setTimeout(type, 500);
+} else {
+setTimeout(type, isDeleting ? 100 : 200);
+}
+}
+// Start typing effect
+setTimeout(type, 1000);
+// Animate elements on scroll
+const animateOnScroll = () => {
+const elements = document.querySelectorAll('.card-hover, .glasseffect');
+elements.forEach(element => {
+const elementPosition = element.getBoundingClientRect().top;
+const screenPosition = window.innerHeight / 1.3;
+if (elementPosition < screenPosition) {
+element.classList.add('animate__animated',
+'animate__fadeInUp');
+}
+});
+};
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+</script>
+</body>
+</html
